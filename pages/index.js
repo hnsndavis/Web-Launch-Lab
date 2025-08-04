@@ -44,6 +44,9 @@ export default function Home() {
               <Link href="#features" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
                 Features
               </Link>
+              <Link href="#work" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+                Our Work
+              </Link>
               <Link href="#pricing" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
                 Pricing
               </Link>
@@ -233,6 +236,185 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-2 text-gray-900">Mobile optimized</h3>
               <p className="text-gray-600">Looks perfect on phones, tablets, and desktops</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Recent Work Section */}
+      <section id="work" className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Recent Work
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              See how we've helped local businesses establish their online presence
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Restaurant Portfolio */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-3xl mb-2">🍝</div>
+                  <div className="text-lg font-semibold">Bella's Italian Kitchen</div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Restaurant</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Modern Italian restaurant website with online reservations and menu showcase.
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">Restaurant • Food Service</span>
+                  <a 
+                    href="#" 
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    View Site
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Dental Practice Portfolio */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-blue-500 to-teal-600 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-3xl mb-2">🦷</div>
+                  <div className="text-lg font-semibold">Downtown Dentistry</div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Dental Practice</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Professional dental practice site with appointment booking and service details.
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">Healthcare • Dental</span>
+                  <a 
+                    href="#" 
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    View Site
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Law Firm Portfolio */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-3xl mb-2">⚖️</div>
+                  <div className="text-lg font-semibold">Miller & Associates</div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Law Firm</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Trustworthy law firm website with practice areas and attorney profiles.
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">Legal • Professional Services</span>
+                  <a 
+                    href="#" 
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    View Site
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Plumbing Service Portfolio */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-3xl mb-2">🔧</div>
+                  <div className="text-lg font-semibold">ProFix Plumbing</div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Home Services</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  24/7 plumbing service website with emergency contact and service areas.
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">Home Services • Plumbing</span>
+                  <a 
+                    href="#" 
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    View Site
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Fitness Studio Portfolio */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-3xl mb-2">💪</div>
+                  <div className="text-lg font-semibold">Peak Fitness Studio</div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fitness Studio</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Modern fitness studio with class schedules and membership options.
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">Fitness • Health & Wellness</span>
+                  <a 
+                    href="#" 
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    View Site
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Auto Repair Portfolio */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div className="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-3xl mb-2">🚗</div>
+                  <div className="text-lg font-semibold">Elite Auto Repair</div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Auto Service</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Professional auto repair shop with service booking and warranty info.
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-500">Automotive • Repair Services</span>
+                  <a 
+                    href="#" 
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
+                  >
+                    View Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <p className="text-lg text-gray-600 mb-6">
+              Ready to get your business online with a professional website?
+            </p>
+            <a 
+              href="#pricing" 
+              className="bg-black text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-colors inline-block"
+            >
+              Get Started Today
+            </a>
           </div>
         </div>
       </section>
