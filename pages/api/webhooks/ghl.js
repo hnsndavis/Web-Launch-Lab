@@ -1,6 +1,6 @@
-const { pool } = require('../../../lib/database');
-const ghl = require('../../../lib/ghl');
-const claude = require('../../../lib/claude');
+import { pool } from '../../../lib/database.js';
+import ghl from '../../../lib/ghl.js';
+import claude from '../../../lib/claude.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
