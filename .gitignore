@@ -33,3 +33,14 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.temp
+.vercel
+
+# Internal weblaunchlab website
+internal/node_modules/
+internal/.next/
+internal/out/
+
+# Projects
+projects/*/node_modules/
+projects/*/.next/
+projects/*/out/

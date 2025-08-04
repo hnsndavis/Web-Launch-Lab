@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import { useState } from 'react';
 
 export default function Home() {
@@ -29,9 +30,43 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <Head>
+        <title>WebLaunch Lab - Get Your Local Business Online in 7 Days</title>
+        <meta name="description" content="Professional websites for local businesses. No tech headaches, no confusing options. Just a high-quality website designed to attract local customers, launched in 7 days guaranteed." />
+        <meta name="keywords" content="local business website, website design, small business web development, 7 day website launch, professional web design" />
+        <meta name="author" content="WebLaunch Lab" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://weblaunchlab.com/" />
+        <meta property="og:title" content="WebLaunch Lab - Get Your Local Business Online in 7 Days" />
+        <meta property="og:description" content="Professional websites for local businesses. No tech headaches, no confusing options. Just a high-quality website designed to attract local customers, launched in 7 days guaranteed." />
+        <meta property="og:image" content="/images/og-image.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://weblaunchlab.com/" />
+        <meta property="twitter:title" content="WebLaunch Lab - Get Your Local Business Online in 7 Days" />
+        <meta property="twitter:description" content="Professional websites for local businesses. No tech headaches, no confusing options. Just a high-quality website designed to attract local customers, launched in 7 days guaranteed." />
+        <meta property="twitter:image" content="/images/og-image.jpg" />
+
+        {/* Favicon */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <link rel="canonical" href="https://weblaunchlab.com/" />
+      </Head>
+      
+      <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white border-b border-gray-100">
+      <header className="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-lg bg-white/95">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
@@ -41,18 +76,18 @@ export default function Home() {
               <span className="text-xl font-semibold text-gray-900">WebLaunch Lab</span>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <Link href="#features" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+              <Link href="#features" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
                 Features
               </Link>
-              <Link href="#work" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+              <Link href="#work" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
                 Our Work
               </Link>
-              <Link href="#pricing" className="text-gray-600 hover:text-gray-900 text-sm font-medium">
+              <Link href="#pricing" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
                 Pricing
               </Link>
-              <Link href="/login" className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
-                Login
-              </Link>
+              <a href="https://form.typeform.com/to/kOOoaNxX" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105">
+                Book Discovery Call
+              </a>
             </nav>
           </div>
         </div>
@@ -81,16 +116,19 @@ export default function Home() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent text-base"
                   required
                 />
-                <button type="submit" className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-colors">
+                <a href="https://form.typeform.com/to/kOOoaNxX" target="_blank" rel="noopener noreferrer" className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
                   Book Your Free Discovery Call
-                </button>
+                </a>
               </form>
             ) : (
               <div className="p-6 bg-green-50 rounded-lg border border-green-200">
-                <p className="text-green-800 font-semibold">Thanks! We'll create your website preview within 24 hours.</p>
+                <p className="text-green-800 font-semibold">Thanks! Let's schedule your discovery call.</p>
+                <a href="https://form.typeform.com/to/kOOoaNxX" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                  Book Now
+                </a>
               </div>
             )}
-            <p className="text-sm text-gray-500 mt-3">No credit card required • 7-day launch guarantee</p>
+            <p className="text-sm text-gray-500 mt-3">7-day launch guarantee</p>
           </div>
 
           {/* Social Proof */}
@@ -410,8 +448,10 @@ export default function Home() {
               Ready to get your business online with a professional website?
             </p>
             <a 
-              href="#pricing" 
-              className="bg-black text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-colors inline-block"
+              href="https://form.typeform.com/to/kOOoaNxX" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-block"
             >
               Get Started Today
             </a>
@@ -419,84 +459,174 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Recent Work Section */}
       <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What our customers say
+              See What We've Built
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Local businesses love their new websites
+              Real websites for real businesses — launched in 7 days or less
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 rounded-xl p-8">
-              <div className="mb-6">
-                <div className="flex text-yellow-400 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Artistry Inc */}
+            <div className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative overflow-hidden">
+                <div className="h-64 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center relative">
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="text-white text-center z-10">
+                    <div className="text-4xl mb-3">📸</div>
+                    <div className="text-2xl font-bold">Artistry Inc</div>
+                    <div className="text-sm opacity-90 mt-2">Photography Studio</div>
+                  </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  "The team delivered exactly what we needed. Our new website looks professional and we're already getting more bookings."
-                </p>
               </div>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Sarah Chen</p>
-                  <p className="text-gray-600 text-sm">Chen's Dental Practice</p>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Creative Photography Studio</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Stunning portfolio website showcasing professional photography services with modern design and seamless user experience.
+                </p>
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-medium">Photography</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">Portfolio</span>
+                  </div>
+                  <a 
+                    href="https://artistry-pnojb4yzj-weblaunchlab.vercel.app" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105 group-hover:shadow-lg"
+                  >
+                    View Live Site →
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8">
-              <div className="mb-6">
-                <div className="flex text-yellow-400 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+            {/* Idaho Cleaning Pros */}
+            <div className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative overflow-hidden">
+                <div className="h-64 bg-gradient-to-br from-blue-500 via-teal-500 to-green-500 flex items-center justify-center relative">
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="text-white text-center z-10">
+                    <div className="text-4xl mb-3">🧽</div>
+                    <div className="text-2xl font-bold">Idaho Cleaning Pros</div>
+                    <div className="text-sm opacity-90 mt-2">Cleaning Service</div>
+                  </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  "Three days from start to finish. I couldn't believe how fast and easy it was. The website perfectly captures our restaurant's vibe."
-                </p>
               </div>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Mike Rodriguez</p>
-                  <p className="text-gray-600 text-sm">Taco Libre Restaurant</p>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Professional Cleaning Service</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Complete cleaning service website with booking system, service pages, and customer-focused design for maximum conversions.
+                </p>
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Cleaning</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">Local Service</span>
+                  </div>
+                  <a 
+                    href="https://idaho-cleaning-pros-1cta8h5k5-weblaunchlab.vercel.app" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105 group-hover:shadow-lg"
+                  >
+                    View Live Site →
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-xl p-8">
-              <div className="mb-6">
-                <div className="flex text-yellow-400 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+            {/* Rooks Barbering */}
+            <div className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative overflow-hidden">
+                <div className="h-64 bg-gradient-to-br from-amber-600 via-orange-600 to-red-600 flex items-center justify-center relative">
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="text-white text-center z-10">
+                    <div className="text-4xl mb-3">✂️</div>
+                    <div className="text-2xl font-bold">Rooks Barbering</div>
+                    <div className="text-sm opacity-90 mt-2">Barbershop</div>
+                  </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  "The monthly maintenance is worth every penny. I never have to worry about my website - it just works."
-                </p>
               </div>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
-                <div>
-                  <p className="font-semibold text-gray-900">Lisa Johnson</p>
-                  <p className="text-gray-600 text-sm">Johnson Plumbing</p>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Modern Barbershop</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Sleek barbershop website with appointment booking, service showcase, and masculine design that attracts the right clientele.
+                </p>
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-medium">Barbershop</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">Grooming</span>
+                  </div>
+                  <a 
+                    href="https://rooks-barbering-cpup9bbzy-weblaunchlab.vercel.app" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105 group-hover:shadow-lg"
+                  >
+                    View Live Site →
+                  </a>
                 </div>
               </div>
             </div>
+
+            {/* Uraban */}
+            <div className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+              <div className="relative overflow-hidden">
+                <div className="h-64 bg-gradient-to-br from-slate-600 via-gray-700 to-zinc-800 flex items-center justify-center relative">
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="text-white text-center z-10">
+                    <div className="text-4xl mb-3">🏙️</div>
+                    <div className="text-2xl font-bold">Uraban</div>
+                    <div className="text-sm opacity-90 mt-2">Lifestyle Brand</div>
+                  </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-t from-black/50 to-transparent"></div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Urban Lifestyle Brand</h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Sophisticated product showcase website with e-commerce functionality and urban aesthetic that perfectly captures the brand identity.
+                </p>
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">Lifestyle</span>
+                    <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">E-commerce</span>
+                  </div>
+                  <a 
+                    href="https://uraban-n62r6b148-weblaunchlab.vercel.app" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105 group-hover:shadow-lg"
+                  >
+                    View Live Site →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-16">
+            <p className="text-lg text-gray-600 mb-6">
+              Want a professional website like these for your business?
+            </p>
+            <a 
+              href="https://form.typeform.com/to/kOOoaNxX" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-black text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center gap-2"
+            >
+              Book Your Discovery Call
+              <span className="text-sm">→</span>
+            </a>
           </div>
         </div>
       </section>
@@ -570,9 +700,9 @@ export default function Home() {
                 </li>
               </ul>
 
-              <button className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-colors">
+              <a href="https://form.typeform.com/to/kOOoaNxX" target="_blank" rel="noopener noreferrer" className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
                 Book Your Free Discovery Call
-              </button>
+              </a>
               
               <p className="text-center text-sm text-gray-500 mt-4">
                 No long-term commitment • Cancel anytime
@@ -602,9 +732,9 @@ export default function Home() {
                 className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:border-transparent text-base"
                 required
               />
-              <button type="submit" className="w-full bg-white text-black px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-100 transition-colors">
+              <a href="https://form.typeform.com/to/kOOoaNxX" target="_blank" rel="noopener noreferrer" className="w-full bg-white text-black px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-100 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
                 Book Your Free Discovery Call
-              </button>
+              </a>
             </form>
             <p className="text-sm text-gray-400 mt-3">7-day launch guarantee • No contracts • Free consultation</p>
           </div>
@@ -639,6 +769,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
