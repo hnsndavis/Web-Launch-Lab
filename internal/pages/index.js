@@ -169,9 +169,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it Works Section */}
+      {/* Your 7-Day Launch Process Section */}
       <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Your 7-Day Launch Process
@@ -181,44 +181,157 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">1</span>
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Step 1 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="text-center mb-6">
+                <p className="text-lg font-bold text-gray-500 uppercase tracking-wide mb-2">Step 1</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Planning + Wireframe</h3>
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">Planning + Wireframe</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Discovery call and site architecture planning. Complete in 1 day.
+              <div className="mb-6">
+                <img 
+                  src="/images/process/step-01.jpg" 
+                  alt="Planning and Wireframe Step"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                width="384"
+                height="320"
+                />
+              </div>
+              <p className="text-gray-600 text-center mb-4">
+                We outline all site pages and sections to get a clear idea of what the site will look like.
+              </p>
+              <p className="text-sm font-semibold text-gray-800 text-center bg-gray-100 px-4 py-2 rounded-full">
+                🕓 Timeline: 1 Day
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">2</span>
+            {/* Step 2 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="text-center mb-6">
+                <p className="text-lg font-bold text-gray-500 uppercase tracking-wide mb-2">Step 2</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Branding + Content</h3>
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">Branding + Content</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Custom design and professional copy creation. Takes 2-3 days.
+              <div className="mb-6 grid grid-cols-2 gap-2">
+                <img 
+                  src="/images/process/step-02.1.jpg" 
+                  alt="Branding Step 1"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                width="384"
+                height="320"
+                />
+                <img 
+                  src="/images/process/step-02.2.jpg" 
+                  alt="Branding Step 2"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                width="384"
+                height="320"
+                />
+                <img 
+                  src="/images/process/step-02.3.jpg" 
+                  alt="Branding Step 3"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                width="384"
+                height="320"
+                />
+                <img 
+                  src="/images/process/step-02.4.jpg" 
+                  alt="Branding Step 4"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                width="384"
+                height="320"
+                />
+              </div>
+              <p className="text-gray-600 text-center mb-4">
+                We customize your site with your branding and company info.
+              </p>
+              <p className="text-sm font-semibold text-gray-800 text-center bg-gray-100 px-4 py-2 rounded-full">
+                🕓 Timeline: 2-3 Days
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">3</span>
+            {/* Step 3 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="text-center mb-6">
+                <p className="text-lg font-bold text-gray-500 uppercase tracking-wide mb-2">Step 3</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Revise + Refine</h3>
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">Revise + Refine</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Your feedback and final adjustments. Completed in 1-2 days.  
+              <div className="mb-6 relative">
+                <img 
+                  src="/images/process/step-02.3.jpg" 
+                  alt="Revise and Refine Step"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                width="384"
+                height="320"
+                />
+                <div className="absolute top-4 left-4 space-y-2">
+                  <img 
+                    src="/images/process/message-01.jpg" 
+                    alt="Message 1"
+                    className="w-32 rounded shadow-lg opacity-90"
+                    loading="lazy"
+                width="384"
+                height="320"
+                  />
+                  <img 
+                    src="/images/process/message-02.jpg" 
+                    alt="Message 2"
+                    className="w-32 rounded shadow-lg opacity-90 ml-8"
+                    loading="lazy"
+                width="384"
+                height="320"
+                  />
+                  <img 
+                    src="/images/process/message-03.jpg" 
+                    alt="Message 3"
+                    className="w-32 rounded shadow-lg opacity-90"
+                    loading="lazy"
+                width="384"
+                height="320"
+                  />
+                </div>
+              </div>
+              <p className="text-gray-600 text-center mb-4">
+                Easily leave your feedback so we can quickly make necessary adjustments.
+              </p>
+              <p className="text-sm font-semibold text-gray-800 text-center bg-gray-100 px-4 py-2 rounded-full">
+                🕓 Timeline: 1-2 Days
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">4</span>
+            {/* Step 4 */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="text-center mb-6">
+                <p className="text-lg font-bold text-gray-500 uppercase tracking-wide mb-2">Step 4</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Connect + Launch</h3>
               </div>
-              <h3 className="text-lg font-semibold mb-3 text-gray-900">Connect + Launch</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                Domain connection and go-live. Your site is online in 1 day.
+              <div className="mb-6 relative">
+                <img 
+                  src="/images/process/step-04.jpg" 
+                  alt="Connect and Launch Step"
+                  className="w-full rounded-lg shadow-md"
+                  loading="lazy"
+                width="384"
+                height="320"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-white/95 rounded-lg p-4 text-center shadow-lg">
+                    <div className="text-green-600 text-4xl mb-2">✓</div>
+                    <div className="text-lg font-semibold text-gray-900">Your site has been published to</div>
+                    <div className="text-blue-600 font-medium">www.yourbusiness.com</div>
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-600 text-center mb-4">
+                After final quality checks, we connect your site to your custom domain and publish!
+              </p>
+              <p className="text-sm font-semibold text-gray-800 text-center bg-gray-100 px-4 py-2 rounded-full">
+                🕓 Timeline: 1 Day
               </p>
             </div>
           </div>
@@ -325,6 +438,10 @@ export default function Home() {
                 alt="Artistry Inc Website"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
+                width="384"
+                height="320"
+                width="384"
+                height="320"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -344,6 +461,8 @@ export default function Home() {
                 alt="Idaho Cleaning Pros Website"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
+                width="384"
+                height="320"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -363,6 +482,8 @@ export default function Home() {
                 alt="Rooks Barbering Website"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
+                width="384"
+                height="320"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -382,6 +503,8 @@ export default function Home() {
                 alt="Uraban Website"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
+                width="384"
+                height="320"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
