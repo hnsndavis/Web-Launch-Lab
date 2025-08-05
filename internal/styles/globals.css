@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom animations */
+@keyframes slide-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide-slow {
+  animation: slide-slow 30s linear infinite;
+}
+
 @layer base {
   html {
     font-family: system-ui, sans-serif;
