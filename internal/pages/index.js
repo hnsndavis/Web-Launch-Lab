@@ -318,7 +318,7 @@ export default function Home() {
               <img 
                 src="/images/projects/artistry-inc-screenshot.png"
                 alt="Artistry Inc Website"
-                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -329,7 +329,7 @@ export default function Home() {
               <img 
                 src="/images/projects/idaho-cleaning-pros-screenshot.png"
                 alt="Idaho Cleaning Pros Website"
-                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -340,7 +340,7 @@ export default function Home() {
               <img 
                 src="/images/projects/rooks-barbering-screenshot.png"
                 alt="Rooks Barbering Website"
-                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -351,7 +351,7 @@ export default function Home() {
               <img 
                 src="/images/projects/uraban-screenshot.png"
                 alt="Uraban Website"
-                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
