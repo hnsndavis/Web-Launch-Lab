@@ -314,48 +314,80 @@ export default function Home() {
           {/* Website Screenshots Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Artistry Inc Screenshot */}
-            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+            <a 
+              href="https://artistry-inc.vercel.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative block transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            >
               <img 
                 src="/images/projects/artistry-inc-screenshot.png"
                 alt="Artistry Inc Website"
-                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="bg-white/90 text-black px-4 py-2 rounded-lg font-semibold text-sm">View Live Site →</span>
+              </div>
+            </a>
 
             {/* Idaho Cleaning Pros Screenshot */}
-            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+            <a 
+              href="https://idaho-cleaning-pros.vercel.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative block transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            >
               <img 
                 src="/images/projects/idaho-cleaning-pros-screenshot.png"
                 alt="Idaho Cleaning Pros Website"
-                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="bg-white/90 text-black px-4 py-2 rounded-lg font-semibold text-sm">View Live Site →</span>
+              </div>
+            </a>
 
             {/* Rooks Barbering Screenshot */}
-            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+            <a 
+              href="https://rooks-barbering.vercel.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative block transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            >
               <img 
                 src="/images/projects/rooks-barbering-screenshot.png"
                 alt="Rooks Barbering Website"
-                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="bg-white/90 text-black px-4 py-2 rounded-lg font-semibold text-sm">View Live Site →</span>
+              </div>
+            </a>
 
             {/* Uraban Screenshot */}
-            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+            <a 
+              href="https://uraban.vercel.app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative block transition-all duration-300 hover:shadow-2xl hover:scale-105"
+            >
               <img 
                 src="/images/projects/uraban-screenshot.png"
                 alt="Uraban Website"
-                className="w-full h-full object-cover object-top transition-all duration-[8000ms] ease-linear group-hover:object-bottom"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="bg-white/90 text-black px-4 py-2 rounded-lg font-semibold text-sm">View Live Site →</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
