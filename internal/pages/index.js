@@ -106,9 +106,6 @@ export default function Home() {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <link rel="canonical" href="https://weblaunchlab.com/" />
-        
-        {/* Typeform Embed Script */}
-        <script src="//embed.typeform.com/next/embed.js" async></script>
       </Head>
       
       <div className="min-h-screen bg-white">
@@ -721,7 +718,12 @@ export default function Home() {
               </svg>
             </button>
             <div className="w-full h-full rounded-lg overflow-hidden">
-              <div data-tf-live="01JZ746460Z0JEDMB3VSZ9FYP4" className="w-full h-full"></div>
+              <iframe
+                src="https://form.typeform.com/to/kOOoaNxX?typeform-medium=embed-snippet"
+                className="w-full h-full border-0"
+                title="Book Your Free Discovery Call"
+                allow="camera; microphone; autoplay; encrypted-media;"
+              ></iframe>
             </div>
           </div>
         </div>
