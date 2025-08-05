@@ -4,20 +4,9 @@ import { useState } from 'react';
 
 export default function Home() {
   const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [showTypeform, setShowTypeform] = useState(false);
 
-  const handleLeadCapture = async (e) => {
-    e.preventDefault();
-    
-    // Always show success and open Typeform for better UX
-    setIsSubmitted(true);
-    
-    // Open Typeform immediately for user
-    setTimeout(() => {
-      openTypeformEmbed();
-    }, 1000);
-    
+  const handleLeadCapture = async () => {
     // Try to capture lead in background (non-blocking)
     try {
       const response = await fetch('/api/leads/capture', {
@@ -46,7 +35,7 @@ export default function Home() {
     
     if (!email.trim()) {
       // Show validation message for empty email
-      const emailInput = document.querySelector('#hero-form input');
+      const emailInput = e.target.form.querySelector('input[type="email"]');
       if (emailInput) {
         emailInput.focus();
         emailInput.setCustomValidity('Please fill out this field.');
@@ -57,19 +46,16 @@ export default function Home() {
       return;
     }
     
-    console.log('Email valid, proceeding with lead capture'); // Debug log
-    // If email exists, capture it first then show Typeform
-    handleLeadCapture(e);
+    console.log('Email valid, opening Typeform and capturing lead'); // Debug log
+    // Open Typeform immediately
+    openTypeformEmbed();
+    
+    // Capture lead in background
+    handleLeadCapture();
   };
 
   const openTypeformEmbed = () => {
     console.log('Opening Typeform embed'); // Debug log
-    setShowTypeform(true);
-  };
-
-  // Direct Typeform opener for testing
-  const openTypeformDirect = () => {
-    console.log('Opening Typeform directly'); // Debug log
     setShowTypeform(true);
   };
 
@@ -158,37 +144,20 @@ export default function Home() {
 
           {/* Lead Capture Form */}
           <div id="hero-form" className="max-w-sm mx-auto mb-12">
-            {!isSubmitted ? (
-              <form onSubmit={handleLeadCapture} className="space-y-4">
-                <input
-                  type="email"
-                  placeholder="Enter your business email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent text-base"
-                  required
-                />
-                <button type="submit" onClick={handleCTAClick} className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
-                  Book Your Free Discovery Call
-                </button>
-              </form>
-            ) : (
-              <div className="p-6 bg-green-50 rounded-lg border border-green-200">
-                <p className="text-green-800 font-semibold">Thanks! Let's schedule your discovery call.</p>
-                <button onClick={openTypeformEmbed} className="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
-                  Book Now
-                </button>
-              </div>
-            )}
+            <form onSubmit={handleCTAClick} className="space-y-4">
+              <input
+                type="email"
+                placeholder="Enter your business email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent text-base"
+                required
+              />
+              <button type="submit" className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
+                Book Your Free Discovery Call
+              </button>
+            </form>
             <p className="text-sm text-gray-500 mt-3">7-day launch guarantee</p>
-            
-            {/* Debug button - remove after testing */}
-            <button 
-              onClick={openTypeformDirect}
-              className="mt-4 px-4 py-2 bg-red-500 text-white rounded text-sm"
-            >
-              Test Typeform (Debug)
-            </button>
           </div>
 
           {/* Social Proof */}
@@ -652,25 +621,19 @@ export default function Home() {
           </p>
           
           <div className="max-w-sm mx-auto">
-            {!isSubmitted ? (
-              <form onSubmit={handleCTAClick} className="space-y-4">
-                <input
-                  type="email"
-                  placeholder="Enter your business email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:border-transparent text-base"
-                  required
-                />
-                <button type="submit" className="w-full bg-white text-black px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-100 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
-                  Book Your Free Discovery Call
-                </button>
-              </form>
-            ) : (
-              <div className="p-6 bg-green-50 rounded-lg border border-green-200">
-                <p className="text-green-800 font-semibold">Thanks! Your discovery call form is opening...</p>
-              </div>
-            )}
+            <form onSubmit={handleCTAClick} className="space-y-4">
+              <input
+                type="email"
+                placeholder="Enter your business email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 border border-gray-600 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-white focus:border-transparent text-base"
+                required
+              />
+              <button type="submit" className="w-full bg-white text-black px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-100 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
+                Book Your Free Discovery Call
+              </button>
+            </form>
             <p className="text-sm text-gray-400 mt-3">7-day launch guarantee • No contracts • Free consultation</p>
           </div>
         </div>
