@@ -37,9 +37,15 @@ export default function Home() {
   const handleCTAClick = (e) => {
     e.preventDefault();
     if (!email.trim()) {
-      // Scroll to hero section if no email provided
-      document.querySelector('#hero-form').scrollIntoView({ behavior: 'smooth' });
-      document.querySelector('#hero-form input').focus();
+      // Show validation message for empty email
+      const emailInput = document.querySelector('#hero-form input');
+      if (emailInput) {
+        emailInput.focus();
+        emailInput.setCustomValidity('Please fill out this field.');
+        emailInput.reportValidity();
+        // Clear the custom validity after user starts typing
+        emailInput.oninput = () => emailInput.setCustomValidity('');
+      }
       return;
     }
     // If email exists, capture it first then open Typeform
