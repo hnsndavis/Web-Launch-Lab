@@ -303,87 +303,58 @@ export default function Home() {
 
 
       {/* See What We've Built Section */}
-      <section id="work" className="bg-gray-50 py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="work" className="bg-gray-50 py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               See What We've Built
             </h2>
           </div>
 
-          {/* Website Screenshots Container */}
-          <div className="relative">
-            <div className="flex space-x-6 animate-slide-slow">
-              {/* Artistry Inc Screenshot */}
-              <div className="flex-shrink-0 w-80 lg:w-96">
-                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
-                  <img 
-                    src="/images/projects/artistry-inc-screenshot.jpg"
-                    alt="Artistry Inc Website"
-                    className="w-full h-64 lg:h-80 object-cover object-top"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+          {/* Website Screenshots Grid */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Artistry Inc Screenshot */}
+            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+              <img 
+                src="/images/projects/artistry-inc-screenshot.png"
+                alt="Artistry Inc Website"
+                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
 
-              {/* Idaho Cleaning Pros Screenshot */}
-              <div className="flex-shrink-0 w-80 lg:w-96">
-                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
-                  <img 
-                    src="/images/projects/idaho-cleaning-pros-screenshot.jpg"
-                    alt="Idaho Cleaning Pros Website"
-                    className="w-full h-64 lg:h-80 object-cover object-top"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+            {/* Idaho Cleaning Pros Screenshot */}
+            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+              <img 
+                src="/images/projects/idaho-cleaning-pros-screenshot.png"
+                alt="Idaho Cleaning Pros Website"
+                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
 
-              {/* Rooks Barbering Screenshot */}
-              <div className="flex-shrink-0 w-80 lg:w-96">
-                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
-                  <img 
-                    src="/images/projects/rooks-barbering-screenshot.jpg"
-                    alt="Rooks Barbering Website"
-                    className="w-full h-64 lg:h-80 object-cover object-top"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+            {/* Rooks Barbering Screenshot */}
+            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+              <img 
+                src="/images/projects/rooks-barbering-screenshot.png"
+                alt="Rooks Barbering Website"
+                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
 
-              {/* Uraban Screenshot */}
-              <div className="flex-shrink-0 w-80 lg:w-96">
-                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
-                  <img 
-                    src="/images/projects/uraban-screenshot.jpg"
-                    alt="Uraban Website"
-                    className="w-full h-64 lg:h-80 object-cover object-top"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              {/* Duplicate set for seamless loop */}
-              <div className="flex-shrink-0 w-80 lg:w-96">
-                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
-                  <img 
-                    src="/images/projects/artistry-inc-screenshot.jpg"
-                    alt="Artistry Inc Website"
-                    className="w-full h-64 lg:h-80 object-cover object-top"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              <div className="flex-shrink-0 w-80 lg:w-96">
-                <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
-                  <img 
-                    src="/images/projects/idaho-cleaning-pros-screenshot.jpg"
-                    alt="Idaho Cleaning Pros Website"
-                    className="w-full h-64 lg:h-80 object-cover object-top"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+            {/* Uraban Screenshot */}
+            <div className="group bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-64 lg:h-80 relative">
+              <img 
+                src="/images/projects/uraban-screenshot.png"
+                alt="Uraban Website"
+                className="w-full h-full object-cover object-top transition-transform duration-[3000ms] ease-linear group-hover:object-bottom"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
         </div>
