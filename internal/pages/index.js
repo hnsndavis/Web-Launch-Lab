@@ -24,9 +24,9 @@ export default function Home() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        // Open Typeform after successful email capture
+        // Show Typeform embed after successful email capture
         setTimeout(() => {
-          window.open('https://form.typeform.com/to/kOOoaNxX', '_blank');
+          openTypeformEmbed();
         }, 1000);
       }
     } catch (error) {
@@ -48,8 +48,12 @@ export default function Home() {
       }
       return;
     }
-    // If email exists, capture it first then open Typeform
+    // If email exists, capture it first then show Typeform
     handleLeadCapture(e);
+  };
+
+  const openTypeformEmbed = () => {
+    setShowTypeform(true);
   };
 
   return (
@@ -85,6 +89,9 @@ export default function Home() {
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <link rel="canonical" href="https://weblaunchlab.com/" />
+        
+        {/* Typeform Embed Script */}
+        <script src="//embed.typeform.com/next/embed.js" async></script>
       </Head>
       
       <div className="min-h-screen bg-white">
@@ -154,9 +161,9 @@ export default function Home() {
             ) : (
               <div className="p-6 bg-green-50 rounded-lg border border-green-200">
                 <p className="text-green-800 font-semibold">Thanks! Let's schedule your discovery call.</p>
-                <a href="https://form.typeform.com/to/kOOoaNxX" target="_blank" rel="noopener noreferrer" className="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
+                <button onClick={openTypeformEmbed} className="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
                   Book Now
-                </a>
+                </button>
               </div>
             )}
             <p className="text-sm text-gray-500 mt-3">7-day launch guarantee</p>
@@ -675,6 +682,25 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Typeform Embed Modal */}
+      {showTypeform && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-lg w-full max-w-4xl h-full max-h-[90vh] relative">
+            <button 
+              onClick={() => setShowTypeform(false)}
+              className="absolute top-4 right-4 z-10 bg-gray-100 hover:bg-gray-200 rounded-full p-2 transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="w-full h-full rounded-lg overflow-hidden">
+              <div data-tf-live="01JZ746460Z0JEDMB3VSZ9FYP4" className="w-full h-full"></div>
+            </div>
+          </div>
+        </div>
+      )}
       </div>
     </>
   );
