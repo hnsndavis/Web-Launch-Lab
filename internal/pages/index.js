@@ -10,6 +10,15 @@ export default function Home() {
   const handleLeadCapture = async (e) => {
     e.preventDefault();
     
+    // Always show success and open Typeform for better UX
+    setIsSubmitted(true);
+    
+    // Open Typeform immediately for user
+    setTimeout(() => {
+      openTypeformEmbed();
+    }, 1000);
+    
+    // Try to capture lead in background (non-blocking)
     try {
       const response = await fetch('/api/leads/capture', {
         method: 'POST',
@@ -21,21 +30,20 @@ export default function Home() {
           source: 'website_homepage'
         })
       });
-
-      if (response.ok) {
-        setIsSubmitted(true);
-        // Show Typeform embed after successful email capture
-        setTimeout(() => {
-          openTypeformEmbed();
-        }, 1000);
+      
+      if (!response.ok) {
+        console.warn('Lead capture API failed, but user experience continues');
       }
     } catch (error) {
-      console.error('Lead capture failed:', error);
+      console.warn('Lead capture failed in background:', error);
+      // Don't block user experience - form still works
     }
   };
 
   const handleCTAClick = (e) => {
     e.preventDefault();
+    console.log('CTA clicked, email:', email); // Debug log
+    
     if (!email.trim()) {
       // Show validation message for empty email
       const emailInput = document.querySelector('#hero-form input');
@@ -48,11 +56,20 @@ export default function Home() {
       }
       return;
     }
+    
+    console.log('Email valid, proceeding with lead capture'); // Debug log
     // If email exists, capture it first then show Typeform
     handleLeadCapture(e);
   };
 
   const openTypeformEmbed = () => {
+    console.log('Opening Typeform embed'); // Debug log
+    setShowTypeform(true);
+  };
+
+  // Direct Typeform opener for testing
+  const openTypeformDirect = () => {
+    console.log('Opening Typeform directly'); // Debug log
     setShowTypeform(true);
   };
 
@@ -167,6 +184,14 @@ export default function Home() {
               </div>
             )}
             <p className="text-sm text-gray-500 mt-3">7-day launch guarantee</p>
+            
+            {/* Debug button - remove after testing */}
+            <button 
+              onClick={openTypeformDirect}
+              className="mt-4 px-4 py-2 bg-red-500 text-white rounded text-sm"
+            >
+              Test Typeform (Debug)
+            </button>
           </div>
 
           {/* Social Proof */}
