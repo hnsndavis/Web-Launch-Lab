@@ -108,7 +108,15 @@ export default function Home() {
               <Link href="#pricing" className="text-gray-600 hover:text-gray-900 text-sm font-medium transition-colors">
                 Pricing
               </Link>
-              <button onClick={handleCTAClick} className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105">
+              <button onClick={() => {
+                const heroForm = document.querySelector('#hero-form input');
+                if (heroForm) {
+                  heroForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  heroForm.focus();
+                } else {
+                  handleCTAClick({ preventDefault: () => {} });
+                }
+              }} className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105">
                 Book Discovery Call
               </button>
             </nav>
@@ -139,7 +147,7 @@ export default function Home() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent text-base"
                   required
                 />
-                <button onClick={handleCTAClick} className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
+                <button type="submit" onClick={handleCTAClick} className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
                   Book Your Free Discovery Call
                 </button>
               </form>
@@ -584,7 +592,15 @@ export default function Home() {
                 </li>
               </ul>
 
-              <button onClick={handleCTAClick} className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
+              <button onClick={() => {
+                const heroForm = document.querySelector('#hero-form input');
+                if (heroForm) {
+                  heroForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  heroForm.focus();
+                } else {
+                  handleCTAClick({ preventDefault: () => {} });
+                }
+              }} className="w-full bg-black text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-200 hover:scale-105 inline-flex items-center justify-center">
                 Book Your Free Discovery Call
               </button>
               
@@ -608,7 +624,7 @@ export default function Home() {
           
           <div className="max-w-sm mx-auto">
             {!isSubmitted ? (
-              <form onSubmit={handleLeadCapture} className="space-y-4">
+              <form onSubmit={handleCTAClick} className="space-y-4">
                 <input
                   type="email"
                   placeholder="Enter your business email"
