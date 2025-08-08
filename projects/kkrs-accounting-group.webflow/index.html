@@ -21,6 +21,89 @@
   -moz-osx-font-smoothing: grayscale;
   -o-font-smoothing: antialiased;
 }
+
+/* Premium Design Improvements */
+.button, .w-button {
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.button:hover, .w-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.layout417_card, .layout395_card {
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.layout417_card:hover, .layout395_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.layout395_card-image, .layout395_card-image-wrapper {
+  border-radius: 10px 10px 0 0 !important;
+  overflow: hidden;
+}
+
+.form_input, .w-input, .w-select {
+  border-radius: 10px !important;
+  transition: all 0.3s ease;
+}
+
+.form_input:focus, .w-input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Navigation Bar Styling */
+.navbar14_component {
+  background-color: white !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  border-radius: 0 0 10px 10px;
+}
+
+.navbar14_link {
+  color: var(--_primitives---colors--green-pea) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar14_link:hover {
+  color: var(--_primitives---colors--green-pea-dark) !important;
+  transform: translateY(-1px);
+}
+
+.navbar14_logo-link h6 {
+  color: var(--_primitives---colors--green-pea) !important;
+}
+
+/* Video container improvements */
+.w-video {
+  border-radius: 0 0 15px 15px !important;
+  overflow: hidden;
+}
+
+/* Footer styling */
+.footer13_component .container-large {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Smooth scroll for navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section spacing improvements */
+.section_header9, .section_layout417, .section_layout245, .section_layout484, .section_contact10 {
+  margin-bottom: 0;
+}
 </style>
 </head>
 <body>
@@ -257,9 +340,9 @@ margin: 0rem !important;
         <nav role="navigation" id="w-node-_7d1019df-5c8f-a6c5-8133-2354ad6c4a06-ad6c49de" class="navbar14_menu w-nav-menu">
           <div class="navbar14_menu-link-wrapper">
             <div class="navbar14_menu-links">
-              <a href="#" class="navbar14_link w-nav-link">About Us</a>
-              <a href="#" class="navbar14_link w-nav-link">Our Services</a>
-              <a href="#" class="navbar14_link w-nav-link">Contact Us</a>
+              <a href="#about" class="navbar14_link w-nav-link">About Us</a>
+              <a href="#services" class="navbar14_link w-nav-link">Our Services</a>
+              <a href="#contact" class="navbar14_link w-nav-link">Contact Us</a>
             </div>
             <div id="w-node-_7d1019df-5c8f-a6c5-8133-2354ad6c4a0f-ad6c49de" class="navbar14_button-wrapper">
               <a href="mailto:info@kkrasgroup.com" class="button is-small w-button">Contact</a>
@@ -280,7 +363,7 @@ margin: 0rem !important;
     <main class="main-wrapper max-width-full">
       <header class="section_header9 color-scheme-1">
         <div class="header9_component">
-          <div style="padding-top:56.17021276595745%" class="w-video w-embed"><video width="100%" height="100%" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+          <div style="height:50vh;" class="w-video w-embed"><video width="100%" height="100%" autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
               <source src="images/hero-video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video></div>
@@ -295,13 +378,7 @@ margin: 0rem !important;
                     <p class="text-size-medium">Established Family Office Since 2007. Founded on 35 years of KKR heritage (1990-2007), serving a select group of high-net-worth families with discretion and expertise.</p>
                     <div class="margin-top margin-medium">
                       <div class="button-group">
-                        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-                          <div style="font-size: 0.9rem; color: #666; line-height: 1.4;">
-                            155 Bovet Road, Suite 770<br>
-                            San Mateo, CA 94402
-                          </div>
-                          <a href="mailto:info@kkrasgroup.com" class="button w-button">Business Inquiries</a>
-                        </div>
+                        <a href="mailto:info@kkrasgroup.com" class="button w-button">Business Inquiries</a>
                       </div>
                     </div>
                   </div>
@@ -311,7 +388,65 @@ margin: 0rem !important;
           </div>
         </div>
       </header>
-      <section class="section_layout417 color-scheme-2">
+      <section id="services" class="section_layout245 color-scheme-3">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="layout245_component">
+                <div class="margin-bottom margin-xxlarge">
+                  <div class="w-layout-grid layout245_content">
+                    <div class="layout245_content-left">
+                      <h2 class="heading-style-h2">Established Family Office Practice</h2>
+                    </div>
+                    <div class="layout245_content-right">
+                      <p class="text-size-medium">KKR Accounting Services LLC serves a select group of high-net-worth families with comprehensive financial management. Our established practice, founded on 35 years of KKR heritage, prioritizes confidentiality and discretion above all.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-layout-grid layout395_row">
+                <div class="layout395_card">
+                  <div id="w-node-_94c4bffb-3607-abc3-7b6f-a83e12454479-076fd1fa" class="layout395_card-image-wrapper"><img loading="lazy" src="images/professional-accounting-office.jpg" alt="Professional accounting office workspace" class="layout395_card-image"></div>
+                  <div class="layout395_card-content">
+                    <div class="layout395_card-content-top">
+                      <div class="margin-bottom margin-xsmall">
+                        <h3 class="heading-style-h4-2">Family Office Accounting &amp; Bookkeeping</h3>
+                      </div>
+                      <p>Comprehensive accounting and bookkeeping for established family offices.</p>
+                    </div>
+                    <div class="margin-top margin-small"></div>
+                  </div>
+                </div>
+                <div class="layout395_card">
+                  <div id="w-node-_94c4bffb-3607-abc3-7b6f-a83e1245448c-076fd1fa" class="layout395_card-image-wrapper"><img loading="lazy" src="images/tax-preparation-workspace.jpg" alt="Professional tax preparation workspace" class="layout395_card-image"></div>
+                  <div class="layout395_card-content">
+                    <div class="layout395_card-content-top">
+                      <div class="margin-bottom margin-xsmall">
+                        <h3 class="heading-style-h4-2">Tax Preparation &amp; Planning</h3>
+                      </div>
+                      <p>Strategic tax preparation and planning for high-net-worth families.</p>
+                    </div>
+                    <div class="margin-top margin-small"></div>
+                  </div>
+                </div>
+                <div class="layout395_card">
+                  <div id="w-node-_94c4bffb-3607-abc3-7b6f-a83e1245449f-076fd1fa" class="layout395_card-image-wrapper"><img loading="lazy" src="images/investment-analysis-desk.jpg" alt="Professional investment analysis workspace" class="layout395_card-image"></div>
+                  <div class="layout395_card-content">
+                    <div class="layout395_card-content-top">
+                      <div class="margin-bottom margin-xsmall">
+                        <h3 class="heading-style-h4-2">Investment Reporting &amp; Analysis</h3>
+                      </div>
+                      <p>Investment reporting and analysis for established client families.</p>
+                    </div>
+                    <div class="margin-top margin-small"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="section_layout417 color-scheme-2">
         <div class="container-large">
           <div class="layout417_component">
             <div class="layout417_content">
@@ -343,75 +478,9 @@ margin: 0rem !important;
                     <p>Confidentiality is fundamental to our practice. We serve only established client families, ensuring complete discretion and privacy in all financial matters.</p>
                   </div>
                 </div>
-                <div class="layout417_card card-4">
-                  <div class="layout417_card-content">
-                    <div class="margin-bottom margin-xsmall">
-                      <h3 class="heading-style-h5">Why Choose Us</h3>
-                    </div>
-                    <p>Our established reputation in high-net-worth family services spans over 35 years. We are recognized for our professional integrity and commitment to client confidentiality.</p>
-                  </div>
-                </div>
               </div>
             </div>
             <div data-w-id="fe271125-78ac-c56d-0344-02ab24f897f0" class="layout417_ix-trigger"></div>
-          </div>
-        </div>
-      </section>
-      <section class="section_layout245 color-scheme-3">
-        <div class="padding-global">
-          <div class="container-large">
-            <div class="padding-section-large">
-              <div class="layout245_component">
-                <div class="margin-bottom margin-xxlarge">
-                  <div class="w-layout-grid layout245_content">
-                    <div class="layout245_content-left">
-                      <h2 class="heading-style-h2">Established Family Office Practice</h2>
-                    </div>
-                    <div class="layout245_content-right">
-                      <p class="text-size-medium">KKR Accounting Services LLC serves a select group of high-net-worth families with comprehensive financial management. Our established practice, founded on 35 years of KKR heritage, prioritizes confidentiality and discretion above all.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-layout-grid layout395_row">
-                <div class="layout395_card">
-                  <div id="w-node-_94c4bffb-3607-abc3-7b6f-a83e12454479-076fd1fa" class="layout395_card-image-wrapper"><img loading="lazy" src="images/accounting-office.jpg" alt="Professional accounting office" class="layout395_card-image"></div>
-                  <div class="layout395_card-content">
-                    <div class="layout395_card-content-top">
-                      <div class="margin-bottom margin-xsmall">
-                        <h3 class="heading-style-h4-2">Family Office Accounting &amp; Bookkeeping</h3>
-                      </div>
-                      <p>Comprehensive accounting and bookkeeping for established family offices.</p>
-                    </div>
-                    <div class="margin-top margin-small"></div>
-                  </div>
-                </div>
-                <div class="layout395_card">
-                  <div id="w-node-_94c4bffb-3607-abc3-7b6f-a83e1245448c-076fd1fa" class="layout395_card-image-wrapper"><img loading="lazy" src="images/tax-planning.jpg" alt="Tax planning and preparation" class="layout395_card-image"></div>
-                  <div class="layout395_card-content">
-                    <div class="layout395_card-content-top">
-                      <div class="margin-bottom margin-xsmall">
-                        <h3 class="heading-style-h4-2">Tax Preparation &amp; Planning</h3>
-                      </div>
-                      <p>Strategic tax preparation and planning for high-net-worth families.</p>
-                    </div>
-                    <div class="margin-top margin-small"></div>
-                  </div>
-                </div>
-                <div class="layout395_card">
-                  <div id="w-node-_94c4bffb-3607-abc3-7b6f-a83e1245449f-076fd1fa" class="layout395_card-image-wrapper"><img loading="lazy" src="images/investment-reporting.jpg" alt="Investment reporting and analysis" class="layout395_card-image"></div>
-                  <div class="layout395_card-content">
-                    <div class="layout395_card-content-top">
-                      <div class="margin-bottom margin-xsmall">
-                        <h3 class="heading-style-h4-2">Investment Reporting &amp; Analysis</h3>
-                      </div>
-                      <p>Investment reporting and analysis for established client families.</p>
-                    </div>
-                    <div class="margin-top margin-small"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -462,14 +531,22 @@ layoutTL.from(layoutText.words,{
           </div>
         </div>
       </section>
-      <section class="section_contact10 color-scheme-2">
+      <section id="contact" class="section_contact10 color-scheme-2">
         <div class="padding-global">
           <div class="container-large">
             <div class="padding-section-large">
               <div class="contact10_component">
                 <div class="w-layout-grid contact10_content">
                   <div class="contact10_map-wrapper">
-                    <div class="contact10_map w-widget w-widget-map" data-widget-style="roadmap" data-widget-latlng="" data-enable-scroll="true" role="" title="" data-enable-touch="true" data-widget-zoom="12" data-widget-tooltip=""></div>
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.6486994472885!2d-122.31147768469161!3d37.54425697980134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f9e5a6b1d6a5b%3A0x7c3b4f7a8c8e5b5a!2s155%20Bovet%20Rd%2C%20San%20Mateo%2C%20CA%2094402!5e0!3m2!1sen!2sus!4v1691523456789!5m2!1sen!2sus"
+                      width="100%" 
+                      height="100%" 
+                      style="border:0; border-radius: 10px;" 
+                      allowfullscreen="" 
+                      loading="lazy" 
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                   </div>
                   <div class="contact10_content-left">
                     <div class="margin-bottom margin-medium">
@@ -537,12 +614,9 @@ layoutTL.from(layoutText.words,{
               <div class="footer13_right-wrapper">
                 <div class="w-layout-grid footer13_menu-wrapper">
                   <div class="footer13_link-list">
-                    <a href="#" class="footer13_link">About Us</a>
-                    <a href="#" class="footer13_link">Our Services</a>
-                  </div>
-                  <div class="footer13_link-list">
-                    <a href="#" class="footer13_link">Heritage</a>
-                    <a href="#" class="footer13_link">Since 2007</a>
+                    <a href="#about" class="footer13_link">About Us</a>
+                    <a href="#services" class="footer13_link">Our Services</a>
+                    <a href="#contact" class="footer13_link">Contact</a>
                   </div>
                 </div>
               </div>
