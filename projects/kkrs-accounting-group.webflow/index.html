@@ -65,22 +65,61 @@
 .navbar14_component {
   background-color: white !important;
   box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-  border-radius: 0 0 10px 10px;
+  border-radius: 15px;
+  margin: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar14_container {
+  border-radius: 15px;
 }
 
 .navbar14_link {
-  color: var(--_primitives---colors--green-pea) !important;
-  font-weight: 500;
+  color: #1a5c3a !important;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .navbar14_link:hover {
-  color: var(--_primitives---colors--green-pea-dark) !important;
+  color: #0f3d27 !important;
   transform: translateY(-1px);
 }
 
 .navbar14_logo-link h6 {
-  color: var(--_primitives---colors--green-pea) !important;
+  color: #1a5c3a !important;
+  font-weight: 700;
+}
+
+/* Add body padding to account for fixed navbar */
+body {
+  padding-top: 80px;
+}
+
+/* Responsive navbar adjustments */
+@media screen and (max-width: 991px) {
+  .navbar14_component {
+    margin: 5px;
+    border-radius: 12px;
+  }
+  
+  body {
+    padding-top: 70px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .navbar14_component {
+    margin: 3px;
+    border-radius: 10px;
+  }
+  
+  body {
+    padding-top: 65px;
+  }
 }
 
 /* Video container improvements */
@@ -90,9 +129,29 @@
 }
 
 /* Footer styling */
+.footer13_component {
+  border-radius: 15px 15px 0 0 !important;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
 .footer13_component .container-large {
   max-width: 100% !important;
   width: 100% !important;
+}
+
+@media screen and (max-width: 991px) {
+  .footer13_component {
+    margin: 0 5px;
+    border-radius: 12px 12px 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer13_component {
+    margin: 0 3px;
+    border-radius: 10px 10px 0 0 !important;
+  }
 }
 
 /* Smooth scroll for navigation links */
@@ -103,6 +162,12 @@ html {
 /* Section spacing improvements */
 .section_header9, .section_layout417, .section_layout245, .section_layout484, .section_contact10 {
   margin-bottom: 0;
+}
+
+/* Fix header section padding */
+.section_header9 .padding-vertical.padding-xxlarge {
+  padding-top: 4rem !important;
+  padding-bottom: 2rem !important;
 }
 </style>
 </head>
@@ -342,7 +407,6 @@ margin: 0rem !important;
             <div class="navbar14_menu-links">
               <a href="#about" class="navbar14_link w-nav-link">About Us</a>
               <a href="#services" class="navbar14_link w-nav-link">Our Services</a>
-              <a href="#contact" class="navbar14_link w-nav-link">Contact Us</a>
             </div>
             <div id="w-node-_7d1019df-5c8f-a6c5-8133-2354ad6c4a0f-ad6c49de" class="navbar14_button-wrapper">
               <a href="mailto:info@kkrasgroup.com" class="button is-small w-button">Contact</a>
@@ -451,7 +515,7 @@ margin: 0rem !important;
           <div class="layout417_component">
             <div class="layout417_content">
               <div class="layout417_title-wrapper">
-                <h2 class="layout417_title">About Us</h2>
+                <h2 class="layout417_title">Our Heritage</h2>
               </div>
               <div class="layout417_list">
                 <div class="layout417_card card-1">
